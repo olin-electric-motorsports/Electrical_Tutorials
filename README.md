@@ -50,3 +50,16 @@ This repository contains various electrical tutorials to get new members up to s
   - Pad separation and spacing requirements
   - Probe points (untented vias at ATmega inputs)
 
+## Times
+- September:
+  - 12, 15, 19, 22, 26, 29
+- October:
+  - 3, 6, 10, 13, 17, 20, 24, 27, 31
+- November:
+  - 3, 7
+
+Total: 17, Actual 17/2 = ~8
+
+ 8 lessons, each ~30 minutes
+
+
