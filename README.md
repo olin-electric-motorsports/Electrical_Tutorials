@@ -8,6 +8,8 @@ This Repo contains a bunch of markdown files which are converted into [reveal.js
 
 To clone correctly, you will have to do it recursively to get the `reveal.js` submodule dependancy.
 
+You can view the slides by going to the tutorial you wish to view, and opening the `slides.html` file in the folder using a web-browser. (For example open `Tut_0_Electrical_Intuition/slides.html` in Chrome)
+
 All `slides.html` are included in the Repo, so you don't need `pandoc` installed to build the slides, but if you want to make changes you will need to get `pandoc`.
 
 ## TODO:
