@@ -13,6 +13,7 @@
 > - Quickly identify dangerous situations
 > - Avoid obvious mistakes in circuit design
 > - Talk intelligently about electricity
+> - Conductors, Capacitors and Resistors
 
 <div class="notes">
 item 3 is especially important for MechE's
@@ -107,4 +108,15 @@ V is Voltage
 I is Current
 
 R is *Resistance*
+
+<div class="notes">
+Ask what this law means and implies. Discuss what "resistance" is.
+</div>
+
+
+# Feedback
+
+## Help Make This Better!
+
+[http://tinyurl.com/formula-tutorial-feedback](https://goo.gl/forms/Q8JvF5ppO3JeT7h73)
 
