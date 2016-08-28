@@ -1,51 +1,110 @@
-% Habits
-% John Doe
-% March 22, 2005
+# Electrical Intuition
 
-# In the morning
+## Intuition
 
-## Getting up
+. . .
 
-- Turn off alarm
-- Get out of bed
+> a natural ability or power that makes it possible to know something without any proof or evidence
+>
+> Merriam-Webster Dictionary
 
-## Code
+## Gameplan
 
-```python
-def test:
-  print("This works!")
-```
-
-## Quotes
-
-Now for some awesome quotes!
-
-> test
-> this is a quote
-
-## Breakfast
-
-- Eat eggs
-- Drink coffee
+> - Quickly identify dangerous situations
+> - Avoid obvious mistakes in circuit design
+> - Talk intelligently about electricity
 
 <div class="notes">
-Let us see how notes work
+item 3 is especially important for MechE's
 </div>
 
-. . . 
+## Electricity is Magic
 
-This is a test
+> - Tiny, little "beads" that move around in only certain things
+> - Can do all sorts of crazy stuff, like Calculators
+> - We actually have no idea why it works
 
-# In the evening
+. . .
 
-## Dinner
+![Lumos spell in Harry Potter](images/lumos.gif)
 
-- Eat spaghetti
-- Drink wine
+<div class="notes">
+- Tiny, little "beads" that move around in only certain things
+- Can do all sorts of crazy stuff, like Calculators
+- We actually have no idea why it works
 
-------------------
+Fun Thing: Do "Okay Google turn on the flashlight" to show that we can do magic as well! (Note: I don't actually know if this works)
 
-## Going to sleep
+Purpose: Electricity and electronics are hard. It is okay to not get things on the first try, and sometimes you just have to believe for now. The key is to just keep working at it. Nobody is born understanding electricity
+</div>
 
-- Get in bed
-- Count sheep
+# Voltage
+
+## What is Voltage?
+
+. . .
+
+> Electric potential difference between two points.
+>
+> Wikipedia
+
+<div class="notes">
+Ask what people know about voltage. Try to get Ohm's Law as an answer, or something. They have a few days in Isim already, they should be experts.
+
+Purpose: Get people talking, make everyone comfortable just putting out ideas. This is an open presentation, not a lecture
+</div>
+
+## Dangers of Voltage
+
+> - Can Voltage kill you?
+> - Is high voltage dangerous?
+
+<div class="notes">
+- Can Voltage kill you? (NO)
+- Is high voltage dangerous? (YES)
+
+Purpose: Bring up current and how it relates to voltage. Also brings in some intuition
+</div>
+
+---------
+
+![High Voltage Warning Sign](images/high_voltage.jpeg)
+
+# Current
+
+## What is Current?
+
+. . .
+
+> An electric current is a flow of electric charge. 
+>
+> Wikipedia
+
+<div class="notes">
+Try to get a bunch of different answers. Ask about how it might be related to voltage. (I sure do hope they go to Ohm's law by this point)
+</div>
+
+## Dangers of Current
+
+> - Can Current kill you?
+> - Is high current dangerous?
+
+<div class="notes">
+- Can Current kill you? (YES)
+- Is high current dangerous? (Well, YES)
+
+The second question is interesting because it raises a good question about what it means to be dangerous. Hopefully I have those fat capacitors with me at this point, and I can explain things with it.
+
+Purpose: Have a discussion about danger
+</div>
+
+# Ohm's Law
+
+## V = I R
+
+V is Voltage
+
+I is Current
+
+R is *Resistance*
+

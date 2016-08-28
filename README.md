@@ -2,6 +2,14 @@
 
 This repository contains various electrical tutorials to get new members up to speed with how Olin Electric Motorsports does electronics and as a reference for current members.
 
+## Instructions
+
+This Repo contains a bunch of markdown files which are converted into [reveal.js](https://github.com/hakimel/reveal.js/) compatible files using [pandoc](http://pandoc.org/). This means it is very easy to generate new slides for presentation purposes, as well as having a text version that is easy to parse individually.
+
+To clone correctly, you will have to do it recursively to get the `reveal.js` submodule dependancy.
+
+All `slides.html` are included in the Repo, so you don't need `pandoc` installed to build the slides, but if you want to make changes you will need to get `pandoc`.
+
 ## TODO:
 
 - Teach an intuitive understanding of what Voltage is
