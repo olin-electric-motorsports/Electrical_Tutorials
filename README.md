@@ -10,7 +10,23 @@ To clone correctly, you will have to do it recursively to get the `reveal.js` su
 
 You can view the slides by going to the tutorial you wish to view, and opening the `slides.html` file in the folder using a web-browser. (For example open `Tut_0_Electrical_Intuition/slides.html` in Chrome)
 
-All `slides.html` are included in the Repo, so you don't need `pandoc` installed to build the slides, but if you want to make changes you will need to get `pandoc`.
+All `slides.html` are included in the Repo, so you don't need `pandoc` installed to build the slides, but if you want to make changes you will need to get `pandoc`. Then just run `make` either in the outermost directory, or within any of the tutorial directories.
+
+## FAQ For Instructors
+
+#### Presentor notes?
+You can view presentor notes in `reveal.js` by pressing `s`. 
+
+#### This doesn't seem to work at all...
+You probably didn't follow my instructions and did not clone the `reveal.js` repo. Lookup submodules in git and figure it out.
+
+Or send me a message on Slack and I will help you.
+
+#### Some markdown isn't being converted correctly
+There are some quirks to the conversion process. Notably, you can't have notes or anything on title slides or else everything breaks. Just follow the patterns that are already present in the slides to get a good idea of how to do things. Or, you know, google this stuff.
+
+#### Where can I learn more about how you did this?
+[pandoc docs](http://pandoc.org/demo/example19/Producing-slide-shows-with-pandoc.html#Producing-slide-shows-with-pandoc)
 
 ## TODO:
 
