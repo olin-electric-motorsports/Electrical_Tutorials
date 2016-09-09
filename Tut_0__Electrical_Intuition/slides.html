@@ -27,6 +27,22 @@
     <div class="slides">
 
 
+<section><section id="overarching-plan" class="titleslide slide level1"><h1>Overarching Plan</h1></section><section id="lessons" class="slide level2">
+<h1>Lessons</h1>
+<ol type="1">
+<li class="fragment">Electrical Intuition</li>
+<li class="fragment">Conductors, Non-Conductors, Resistors and Capacitors</li>
+<li class="fragment">Advanced Electronics</li>
+<li class="fragment">Advanced Electronics Pt. 2</li>
+<li class="fragment">Making a schematic</li>
+<li class="fragment">Making a PCB</li>
+<li class="fragment">A Quick Intro to Embedded Software</li>
+<li class="fragment">Advanced Embedded Electronics</li>
+</ol>
+<aside class="notes">
+<p>Each lesson will be 30 minutes, once a week. The goal is less depth and more breadth, as well as intuition building. Learn the topics to Google, rather than teach everything.</p>
+</aside>
+</section></section>
 <section><section id="electrical-intuition" class="titleslide slide level1"><h1>Electrical Intuition</h1></section><section id="intuition" class="slide level2">
 <h1>Intuition</h1>
 <div class="fragment">
@@ -41,7 +57,6 @@
 <li class="fragment">Quickly identify dangerous situations</li>
 <li class="fragment">Avoid obvious mistakes in circuit design</li>
 <li class="fragment">Talk intelligently about electricity</li>
-<li class="fragment">Conductors, Capacitors and Resistors</li>
 </ul>
 <aside class="notes">
 <p>item 3 is especially important for MechE's</p>
@@ -78,8 +93,20 @@
 <aside class="notes">
 <p>Ask what people know about voltage. Try to get Ohm's Law as an answer, or something. They have a few days in Isim already, they should be experts.</p>
 <p>Purpose: Get people talking, make everyone comfortable just putting out ideas. This is an open presentation, not a lecture</p>
+<p>Also note: - Electric Force / q = electric field - The electric field integrated over a distance (line integral) gives you an electric potential - Difference in electric potential is the voltage</p>
+<p>Really get to how voltage interacts with the world.</p>
 </aside>
 </div>
+</section><section id="do-you-get-it" class="slide level2">
+<h1>Do you get it?</h1>
+<ul>
+<li class="fragment">A resistor connected to a power source (not grounded)</li>
+<li class="fragment">A resistor connected to a power source (grounded)</li>
+<li class="fragment">A capacitor connected to a power source (not grounded)</li>
+</ul>
+<aside class="notes">
+<p>A resistor (not grounded) = voltage of power source on both leads A resistor (grounded) = voltage of power source across (challenge) A capacitor (not grounded) = voltage of power source and 1/2 voltage on other lead</p>
+</aside>
 </section><section id="dangers-of-voltage" class="slide level2">
 <h1>Dangers of Voltage</h1>
 <ul>
@@ -108,6 +135,8 @@
 </blockquote>
 <aside class="notes">
 <p>Try to get a bunch of different answers. Ask about how it might be related to voltage. (I sure do hope they go to Ohm's law by this point)</p>
+<p>Also discuss that Current is <code>dq/dt</code>. It is a rate of charge movement.</p>
+<p>Current is constant in series, split in parallel.</p>
 </aside>
 </div>
 </section><section id="dangers-of-current" class="slide level2">
@@ -118,7 +147,9 @@
 </ul>
 <aside class="notes">
 <ul>
-<li>Can Current kill you? (YES)</li>
+<li>Can Current kill you? (YES)<br />
+</li>
+<li>as low as 100mA can be fatal. Your microwave draws around 5A. Laptop draws around 1.5A. Phone is something like 200mA.</li>
 <li>Is high current dangerous? (Well, YES)</li>
 </ul>
 <p>The second question is interesting because it raises a good question about what it means to be dangerous. Hopefully I have those fat capacitors with me at this point, and I can explain things with it.</p>
@@ -131,9 +162,66 @@
 <p>I is Current</p>
 <p>R is <em>Resistance</em></p>
 <aside class="notes">
-<p>Ask what this law means and implies. Discuss what &quot;resistance&quot; is.</p>
+<p>Ask what this law means and implies. Discuss what &quot;resistance&quot; is.Z</p>
+<p>Try to get a good definition of resistance.</p>
+<p>Really get to the implications of the rule, rather than just what it states. &gt; Implies current is proportional to voltage &gt; If you have two, you have all three</p>
+</aside>
+</section><section id="applications-of-ohms-law" class="slide level2">
+<h1>Applications of Ohm's Law</h1>
+<ul>
+<li class="fragment">Current through a resistor (grounded)</li>
+<li class="fragment">Current through resistors in series</li>
+<li class="fragment">Current through resistors in parallel</li>
+</ul>
+<aside class="notes">
+
 </aside>
 </section></section>
+<section><section id="why-this-all-matters" class="titleslide slide level1"><h1>Why This All Matters</h1></section><section id="all-that-is-needed-for-simple-electronics" class="slide level2">
+<h1>All that is needed for simple electronics</h1>
+<ul>
+<li class="fragment">Immediately know what a simple circuit is &quot;doing&quot;</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Capacitors are basically &quot;slow&quot; super resistors</li>
+<li>Inductors are basically &quot;slow&quot; wires</li>
+</ul>
+<aside class="notes">
+<p>Really highlight how simple capacitors and inductors can be thought of</p>
+</aside>
+</div>
+</section><section id="intuition-1" class="slide level2">
+<h1>Intuition</h1>
+<ul>
+<li class="fragment">Capacitor in series with a resistor</li>
+<li class="fragment">Inductor in series with a resistor</li>
+<li class="fragment">Capacitor in parallel with a resistor</li>
+<li class="fragment">Capacitor and inductor in series with a resistor</li>
+<li class="fragment">Capacitor and inductor in parallel, in series with a resistor</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Capacitor slowly fills and stops current</li>
+<li>Inductor slowly &quot;loosens&quot; and allows current</li>
+<li>Capacitor and inductor &quot;fight&quot; and just slow the process to get to equilibrium</li>
+<li>Capacitor and inductor oscillate</li>
+</ul>
+</aside>
+</section><section id="also-applies-to-hard-electronics" class="slide level2">
+<h1>Also applies to hard electronics</h1>
+<ul>
+<li class="fragment">Impedances describe everything as Resistors in the frequency domain</li>
+<li class="fragment">Ohm's law still works</li>
+<li class="fragment">Immediately find transfer function using basic algebra</li>
+<li class="fragment">Defines the system in a few minutes</li>
+</ul>
+<aside class="notes">
+<p>State that nobody is expected to understand / know this</p>
+<p>Higher level electronics</p>
+</aside>
+</section></section>
+<section><section id="free-talk-and-questions" class="titleslide slide level1"><h1>Free Talk And Questions</h1></section></section>
 <section><section id="feedback" class="titleslide slide level1"><h1>Feedback</h1></section><section id="help-make-this-better" class="slide level2">
 <h1>Help Make This Better!</h1>
 <p><a href="https://goo.gl/forms/Q8JvF5ppO3JeT7h73">http://tinyurl.com/formula-tutorial-feedback</a></p>
