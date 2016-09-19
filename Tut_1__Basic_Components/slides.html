@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="../reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="../reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section><section id="looking-back" class="titleslide slide level1"><h1>Looking Back</h1></section><section id="questions-from-last-time" class="slide level2">
+<h1>Questions From Last Time</h1>
+<ul>
+<li class="fragment">How much background experience is required to be helpful?</li>
+<li class="fragment">How to do Frequency Analysis/Finding a transfer function</li>
+<li class="fragment">Why does the Inductor act as a low-pass filter in the intuitive model?</li>
+<li class="fragment">Why does the Capacitor have .5V on one side?</li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>How much background experience is required to be helpful? None. However, we do expect you to learn.</p></li>
+<li><p>How to do Frequency Analysis/Finding a transfer function Take SigSys if you are really interested. I can possibly do a talk later out how to do this, but it is slightly out of the scope of these tutorials.</p></li>
+<li><p>Why does the Inductor act as a low-pass filter in the intuitive model? A slow wire acts like a wire for low frequencies, and acts like an open rcuit for higher frequencies.</p></li>
+<li><p>Why does the Capacitor have .5V on one side? I lied. It doesn't. LTSpice also lied to me. Don't trust anyone.</p></li>
+</ul>
+</aside>
+</section></section>
+<section><section id="basic-components-in-electronics" class="titleslide slide level1"><h1>Basic Components in Electronics</h1></section><section id="the-big-four" class="slide level2">
+<h1>The Big Four</h1>
+<ul>
+<li class="fragment">Wire</li>
+<li class="fragment">Resistor</li>
+<li class="fragment">Capacitor</li>
+<li class="fragment">Inductor</li>
+</ul>
+<aside class="notes">
+
+</aside>
+</section><section id="relations" class="slide level2">
+<h1>Relations</h1>
+<ul>
+<li>A wire is a <em>conductor</em></li>
+<li>A resistor is a bad wire</li>
+<li>A Capacitor is a slow, super-resistor</li>
+<li>An Inductor is a slow wire</li>
+</ul>
+</section></section>
+<section><section id="conductors-non-conductors-and-the-in-between" class="titleslide slide level1"><h1>Conductors, Non-Conductors and the In-Between</h1></section><section id="a-conductor" class="slide level2">
+<h1>A Conductor</h1>
+<blockquote>
+<p>a conductor is an object or type of material that allows the flow of an electrical current in one or more directions</p>
+<p>Wikipedia</p>
+</blockquote>
+</section><section id="fermi-levels" class="slide level2">
+<h1>Fermi Levels</h1>
+<figure>
+<img src="images/fermi.png" />
+</figure>
+</section><section id="how-resistance-relates" class="slide level2">
+<h1>How Resistance Relates</h1>
+<figure>
+<img src="images/resistance.jpeg" />
+</figure>
+</section></section>
+<section><section id="capacitors-in-a-new-light" class="titleslide slide level1"><h1>Capacitors In A New Light</h1></section><section id="a-bridge-between-worlds" class="slide level2">
+<h1>A Bridge Between Worlds</h1>
+<figure>
+<img src="images/capacitance.png" />
+</figure>
+<aside class="notes">
+<p>epsilon is the permitivity of free space, but could also be the permitivity of an insulation material</p>
+<p>Basically a conductor, non-conductor sandwich</p>
+</aside>
+</section><section id="how-they-work" class="slide level2">
+<h1>How They Work</h1>
+<ul>
+<li class="fragment">As current flows, charge builds up on both sides</li>
+<li class="fragment">This charge creates an electric field at the center, where energy is stored</li>
+<li class="fragment">When disconnected, that electric field remains stable</li>
+<li class="fragment">Discharge extremely quickly</li>
+</ul>
+</section></section>
+<section><section id="inductors" class="titleslide slide level1"><h1>Inductors</h1></section><section id="just-wires" class="slide level2">
+<h1>Just Wires</h1>
+<figure>
+<img src="images/inductance.jpg" />
+</figure>
+</section><section id="how-they-work-1" class="slide level2">
+<h1>How They Work</h1>
+<ul>
+<li class="fragment">As current flows some magic happens</li>
+<li class="fragment">A magnetic field is generated (?) in the center which stores energy (?)</li>
+<li class="fragment">When disconnected... Uh...</li>
+<li class="fragment">...</li>
+</ul>
+</section><section id="why-inductors-suck" class="slide level2">
+<h1>Why Inductors Suck</h1>
+<aside class="notes">
+<p>The exact reason is that an inductor can be defined by <code>L = dB_flux/di</code> where <code>B_flux</code> is the magnetic flux and <code>i</code> is instantaneous current.</p>
+<p><code>L</code> is a constant, so when you &quot;turn off&quot; and inductor, you essentially make the <code>di</code> absolutely massive (going from some current to no current, which if thought to be instant would mean an infinite di).</p>
+<p>Thus the <code>B_flux</code> would have to be massive in order to counter-act the large <code>di</code> term. A large change in <code>B_flux</code> thus generates a massive Emf due to Faraday's law</p>
+<p>Emf = - <code>dB_flux/dt</code></p>
+</aside>
+</section></section>
+<section><section id="a-look-ahead" class="titleslide slide level1"><h1>A Look Ahead</h1></section><section id="the-new-kid" class="slide level2">
+<h1>The New Kid</h1>
+<ul>
+<li class="fragment">Transistors and Other Semiconductor nonsense</li>
+<li class="fragment">Basic semiconductor circuits, including:</li>
+<li class="fragment">Half-bridge Rectifier</li>
+<li class="fragment">Full-bridge Rectifier</li>
+<li class="fragment">Half-bridge Driver</li>
+<li class="fragment">Full-bridge Driver</li>
+</ul>
+</section></section>
+<section><section id="questions" class="titleslide slide level1"><h1>Questions</h1></section></section>
+<section><section id="feedback" class="titleslide slide level1"><h1>Feedback</h1></section><section id="help-make-this-better" class="slide level2">
+<h1>Help Make This Better!</h1>
+<p><a href="https://goo.gl/forms/Q8JvF5ppO3JeT7h73">http://tinyurl.com/formula-tutorial-feedback</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
